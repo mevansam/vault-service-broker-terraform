@@ -9,9 +9,14 @@ resource "cf_service_broker" "vault-broker" {
   password = "${var.service_broker_password}"
 }
 
-resource "cf_service_access" "redis-access" {
+resource "cf_service_access" "vault-broker" {
   count = "${length(var.service_access_orgs)}"
 
   plan = "${cf_service_broker.vault-broker.service_plans["hashicorp-vault/shared"]}"
-  org  = "${var.service_access_orgs[count.index]}"
+  org  = "${element(data.cf_org.vault-org.*.id, count.index)}"
+}
+
+data "cf_org" "vault-org" {
+  count = "${length(var.service_access_orgs)}"
+  name  = "${var.service_access_orgs[count.index]}"
 }
