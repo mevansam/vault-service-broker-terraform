@@ -36,28 +36,28 @@ module "vault-service-broker-common" {
 
 The following variables are supported.
 
-* org_name - (Type: String) The organization to which the Vault service broker should be deployed to.
+* org_name - (Type: String, Required) The organization to which the Vault service broker should be deployed to.
 
-* space_name - (Type: String) The space to which the Vault service broker should be deployed to.
+* space_name - (Type: String, Required) The space to which the Vault service broker should be deployed to.
 
-* vault_address - (Type: String) The Vault endpoint address.
+* vault_address - (Type: String, Required) The Vault endpoint address.
 
-* ca_cert_path - (Type: String) "The path to CA cert for Vault if locally or self-signed. Default is 'N/A', which will require the Vault endpoint to have a valid certificate if using HTTPS.
+* ca_cert_path - (Type: String, Optional) "The path to CA cert for Vault if locally or self-signed. Default is 'N/A', which will require the Vault endpoint to have a valid certificate if using HTTPS.
 
-* vault_token_path - (Type: String) The path to the Vault service broker token secret in Vault.
+* vault_token_path - (Type: String, Required) The path to the Vault service broker token secret in Vault.
 
-* vault_token_policy_name - (Type: String) The Vault policy to apply to the token created for the service broker.
+* vault_token_policy_name - (Type: String, Required) The Vault policy to apply to the token created for the service broker.
 
-* vault_token_period - (Type: String) The renewal period for the generated token. Default is 30 minutes.
+* vault_token_period - (Type: String, Optional) The renewal period for the generated token. Default is 30 minutes.
 
-* vault_service_broker_version - (Type: String) The Github tag of the service broker release. Default is v0.2.0.
+* vault_service_broker_version - (Type: String, Optional) The Github tag of the service broker release. Default is v0.2.0.
 
-* service_broker_username - (Type: String) The Github tag of the service broker release. Default is 'vault'.
+* service_broker_username - (Type: String, Optional) The Github tag of the service broker release. Default is 'vault'.
 
-* service_broker_password - (Type: String) The Github tag of the service broker release. Default is a random string.
+* service_broker_password - (Type: String, Optional) The Github tag of the service broker release. Default is a random string.
 
-* num_server_instances - (Type: Number) Number of service instances to start. The default is 1.
+* num_server_instances - (Type: Number, Optional) Number of service instances to start. The default is 1.
 
-* root_domain_name - (Type: String) The root domain to use when mapping routes.
+* root_domain_name - (Type: String, Required) The root domain to use when mapping routes.
 
-* route_postfix - (Type: String) A name to postfix the server hostname with to create a unique route to the Spring Cloud Data Flow server.
+* route_postfix - (Type: String, Required) A name to postfix the server hostname with to create a unique route to the Spring Cloud Data Flow server.
