@@ -61,3 +61,5 @@ The following variables are supported.
 * root_domain_name - (Type: String, Required) The root domain to use when mapping routes.
 
 * route_postfix - (Type: String, Required) A name to postfix the server hostname with to create a unique route to the Spring Cloud Data Flow server.
+
+* service_access_orgs - (Type: Array of Strings, Required) List of orgs which will be granted access to thi instance of the Vault service broker.
