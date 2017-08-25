@@ -46,15 +46,15 @@ The following variables are supported.
 
 * vault_token_path - (Type: String) The path to the Vault service broker token secret in Vault.
 
-* svault_token_policy_name - (Type: String) The Vault policy to apply to the token created for the service broker.
+* vault_token_policy_name - (Type: String) The Vault policy to apply to the token created for the service broker.
 
-* svault_token_period - (Type: String) The renewal period for the generated token. Default is 30 minutes.
+* vault_token_period - (Type: String) The renewal period for the generated token. Default is 30 minutes.
 
-* svault_service_broker_version - (Type: String) The Github tag of the service broker release. Default is v0.2.0.
+* vault_service_broker_version - (Type: String) The Github tag of the service broker release. Default is v0.2.0.
 
-* sservice_broker_username - (Type: String) The Github tag of the service broker release. Default is 'vault'.
+* service_broker_username - (Type: String) The Github tag of the service broker release. Default is 'vault'.
 
-* sservice_broker_password - (Type: String) The Github tag of the service broker release. Default is a random string.
+* service_broker_password - (Type: String) The Github tag of the service broker release. Default is a random string.
 
 * num_server_instances - (Type: Number) Number of service instances to start. The default is 1.
 
