@@ -7,6 +7,8 @@ resource "cf_service_broker" "vault-broker" {
   url      = "https://${cf_route.vault-broker.endpoint}"
   username = "${var.service_broker_username}"
   password = "${var.service_broker_password}"
+
+  depends_on = ["cf_app.vault-broker"]
 }
 
 resource "cf_service_access" "vault-broker" {
