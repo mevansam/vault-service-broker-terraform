@@ -31,7 +31,6 @@ module "vault-service-broker-common" {
 
   service_access_orgs = ["engineering"]
 }
-
 ```
 
 The following variables are supported.
