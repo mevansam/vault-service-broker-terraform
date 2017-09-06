@@ -16,7 +16,7 @@ To use this module use the following HCL snippet as an example.
 #
 
 module "vault-service-broker-common" {
-  source = "https://github.com/mevansam/vault-service-broker-terraform"
+  source = "github.com/mevansam/vault-service-broker-terraform"
 
   org_name   = "engineering"
   space_name = "utilities"
